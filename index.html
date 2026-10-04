@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <h1>School Registration Form</h1>
+
+      <form action="/register" method="post">
+        <label for="fullname"> Full Name:</label><br />
+        <input type="text" id="fullname" name="fullname" required /><br />
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required /> <br />
+        <label for="password">Password: </label><br />
+        <input type="password" id="password" name="password" /><br />
+        <label for="password">Confirm Password: </label><br />
+        <input type="password" id="confirm-password" name="password" /><br />
+
+        <label>Gender:</label>
+        <div class="gender">
+          <label>
+            <input type="radio" value="male" name="gender"  />
+            Male
+          </label>
+          <label>
+            <input type="radio" value="female" name="gender" />
+            Female
+          </label>
+        </div><br>
+
+        <select name="" id="">
+          <option value="">Select your country</option>
+          <option value="nigeria">Nigeria</option>
+          <option value="usa">USA</option>
+          <option value="cameroon">Cameroon</option>
+          <option value="kenya">Kenya</option>
+          <option value="canada">Canada</option>
+          <option value="south-africa">South Africa</option></select
+        ><br /><br>
+
+        <label for="about">About Yourself:</label>
+        <textarea
+          name="about"
+          id="about"
+          placeholder="Tell us a little about yourself"
+        ></textarea>
+
+        <div class="terms">
+
+          <label>
+          <input type="checkbox" name="terms" required />
+          I agree to the terms and conditions.<a href="/learnmore">Learn More</a></label
+        ><br />
+        </div>
+        
+
+        <button type="submit">Register</button>
+      </form>
+
+
+      <h2>Search </h2>
+
+      <form action="/search" method="get">
+        <input type="search">
+        <button > Search</button>
+      </form>
+
+      <section class="answers">
+
+            <h2>What I Learned</h2>
+
+            <h3>1. What does the action attribute do?</h3>
+            <p>
+                The action attribute tells the browser where to send the
+                form data after the form is submitted.
+            </p>
+
+            <h3>2. What does the method attribute do?</h3>
+            <p>
+                The method attribute tells the browser how the form data
+                should be sent. Common methods are GET and POST.
+            </p>
+
+            <h3>3. Why is GET commonly useful for a search form?</h3>
+            <p>
+                GET puts the search information in the URL, making it
+                useful for searching and allowing the search URL to be
+                bookmarked or shared.
+            </p>
+
+            <h3>4. Why might POST be used for a registration form?</h3>
+            <p>
+                POST sends the form data in the request body instead of
+                putting it directly in the URL. It is commonly used when
+                submitting information such as registration details.
+            </p>
+
+            <h3>5. Does using POST automatically make information secure?</h3>
+            <p>
+                No. POST does not automatically make information secure.
+                HTTPS is needed to encrypt information while it is being
+                sent between the browser and the server.
+            </p>
+
+        </section>
+    </div>
+  </body>
+</html>
